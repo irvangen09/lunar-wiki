@@ -24,6 +24,7 @@ use Lunar\Content\Infobox_Integration;
 use Lunar\Content\Game_Menu_Meta;
 use Lunar\Content\Game_Tile_Meta;
 use Lunar\Content\Update_Notes_Meta;
+use Lunar\Users\Author_Fields;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -88,6 +89,7 @@ function bootstrap(): void {
 	( new Game_Menu_Meta() )->init();
 	( new Game_Tile_Meta() )->init();
 	( new Update_Notes_Meta() )->init();
+	( new Author_Fields() )->init();
 }
 add_action( 'plugins_loaded', __NAMESPACE__ . '\\bootstrap' );
 

@@ -79,7 +79,7 @@ function lunar_wiki_get_field_meta_key( string $slug ): string {
  * @return string
  */
 function lunar_wiki_get_author_role( int $user_id ): string {
-	return '';
+	return \Lunar\Users\Author_Fields::get_role( $user_id );
 }
 
 /**
@@ -87,7 +87,7 @@ function lunar_wiki_get_author_role( int $user_id ): string {
  * @return array<int, array{label: string, url: string, icon: string}>
  */
 function lunar_wiki_get_author_social_links( int $user_id ): array {
-	return array();
+	return \Lunar\Users\Author_Fields::get_social_links( $user_id );
 }
 
 /**
