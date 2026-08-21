@@ -94,7 +94,7 @@ function lunar_wiki_get_author_social_links( int $user_id ): array {
  * @return string
  */
 function lunar_wiki_get_game_menu_meta_key(): string {
-	return '';
+	return \Lunar\Content\Game_Menu_Meta::get_meta_key();
 }
 
 /**
