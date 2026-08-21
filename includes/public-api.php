@@ -110,3 +110,10 @@ function lunar_wiki_get_game_tile_url_meta_key(): string {
 function lunar_wiki_get_game_tile_image_meta_key(): string {
 	return \Lunar\Content\Game_Tile_Meta::get_image_meta_key();
 }
+
+/**
+ * @return string
+ */
+function lunar_wiki_get_update_notes_meta_key(): string {
+	return \Lunar\Content\Update_Notes_Meta::get_meta_key();
+}
