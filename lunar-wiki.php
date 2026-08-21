@@ -17,6 +17,8 @@
 
 namespace Lunar\Wiki;
 
+use Lunar\Content\Post_Types;
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -73,6 +75,7 @@ function autoload( string $class_name ): void {
 spl_autoload_register( __NAMESPACE__ . '\\autoload' );
 
 function bootstrap(): void {
+	( new Post_Types() )->init();
 }
 add_action( 'plugins_loaded', __NAMESPACE__ . '\\bootstrap' );
 
