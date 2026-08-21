@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @return string
  */
 function lunar_wiki_get_post_type_slug(): string {
-	return '';
+	return \Lunar\Content\Post_Types::get_slug();
 }
 
 /**
@@ -42,7 +42,13 @@ function lunar_wiki_get_taxonomy_slug_field(): string {
  * @return bool
  */
 function lunar_wiki_is_wiki_article( $post = null ): bool {
-	return false;
+	$post = get_post( $post );
+
+	if ( ! $post instanceof \WP_Post ) {
+		return false;
+	}
+
+	return $post->post_type === \Lunar\Content\Post_Types::get_slug();
 }
 
 /**
