@@ -20,7 +20,7 @@ function lunar_wiki_get_post_type_slug(): string {
  * @return string
  */
 function lunar_wiki_get_taxonomy_slug_game(): string {
-	return '';
+	return \Lunar\Content\Taxonomies::get_slug_game();
 }
 
 /**

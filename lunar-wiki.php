@@ -18,6 +18,7 @@
 namespace Lunar\Wiki;
 
 use Lunar\Content\Post_Types;
+use Lunar\Content\Taxonomies;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -76,6 +77,7 @@ spl_autoload_register( __NAMESPACE__ . '\\autoload' );
 
 function bootstrap(): void {
 	( new Post_Types() )->init();
+	( new Taxonomies() )->init();
 }
 add_action( 'plugins_loaded', __NAMESPACE__ . '\\bootstrap' );
 
