@@ -27,7 +27,7 @@ function lunar_wiki_get_taxonomy_slug_game(): string {
  * @return string
  */
 function lunar_wiki_get_taxonomy_slug_content_type(): string {
-	return '';
+	return \Lunar\Content\Taxonomies::get_slug_content_type();
 }
 
 /**
