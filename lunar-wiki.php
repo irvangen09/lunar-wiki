@@ -22,6 +22,7 @@ use Lunar\Content\Taxonomies;
 use Lunar\Content\Meta_Sync;
 use Lunar\Content\Infobox_Integration;
 use Lunar\Content\Game_Menu_Meta;
+use Lunar\Content\Game_Tile_Meta;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -84,6 +85,7 @@ function bootstrap(): void {
 	( new Meta_Sync() )->init();
 	( new Infobox_Integration() )->init();
 	( new Game_Menu_Meta() )->init();
+	( new Game_Tile_Meta() )->init();
 }
 add_action( 'plugins_loaded', __NAMESPACE__ . '\\bootstrap' );
 

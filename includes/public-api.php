@@ -101,12 +101,12 @@ function lunar_wiki_get_game_menu_meta_key(): string {
  * @return string
  */
 function lunar_wiki_get_game_tile_url_meta_key(): string {
-	return '';
+	return \Lunar\Content\Game_Tile_Meta::get_url_meta_key();
 }
 
 /**
  * @return string
  */
 function lunar_wiki_get_game_tile_image_meta_key(): string {
-	return '';
+	return \Lunar\Content\Game_Tile_Meta::get_image_meta_key();
 }
