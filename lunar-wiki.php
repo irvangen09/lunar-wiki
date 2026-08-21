@@ -19,6 +19,8 @@ namespace Lunar\Wiki;
 
 use Lunar\Content\Post_Types;
 use Lunar\Content\Taxonomies;
+use Lunar\Content\Meta_Sync;
+use Lunar\Content\Infobox_Integration;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -78,6 +80,8 @@ spl_autoload_register( __NAMESPACE__ . '\\autoload' );
 function bootstrap(): void {
 	( new Post_Types() )->init();
 	( new Taxonomies() )->init();
+	( new Meta_Sync() )->init();
+	( new Infobox_Integration() )->init();
 }
 add_action( 'plugins_loaded', __NAMESPACE__ . '\\bootstrap' );
 
