@@ -52,10 +52,10 @@ function lunar_wiki_is_wiki_article( $post = null ): bool {
 }
 
 /**
- * @return string[]
+ * @return array<string, string> Term slug => term label.
  */
 function lunar_wiki_get_recognized_fields(): array {
-	return array();
+	return ( new \Lunar\Content\Meta_Fields() )->get_recognized_fields();
 }
 
 /**
@@ -63,7 +63,7 @@ function lunar_wiki_get_recognized_fields(): array {
  * @return string|null
  */
 function lunar_wiki_get_field_label( int $term_id ): ?string {
-	return null;
+	return ( new \Lunar\Content\Meta_Fields() )->get_field_label( $term_id );
 }
 
 /**
@@ -71,7 +71,7 @@ function lunar_wiki_get_field_label( int $term_id ): ?string {
  * @return string
  */
 function lunar_wiki_get_field_meta_key( string $slug ): string {
-	return '';
+	return ( new \Lunar\Content\Meta_Fields() )->get_meta_key( $slug );
 }
 
 /**
