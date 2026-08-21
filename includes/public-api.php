@@ -1,0 +1,106 @@
+<?php
+/**
+ * Public API for Lunar Wiki, consumed by Lunar Theme and Lunar SEO.
+ *
+ * @package Lunar\Wiki
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+/**
+ * @return string
+ */
+function lunar_wiki_get_post_type_slug(): string {
+	return '';
+}
+
+/**
+ * @return string
+ */
+function lunar_wiki_get_taxonomy_slug_game(): string {
+	return '';
+}
+
+/**
+ * @return string
+ */
+function lunar_wiki_get_taxonomy_slug_content_type(): string {
+	return '';
+}
+
+/**
+ * @return string
+ */
+function lunar_wiki_get_taxonomy_slug_field(): string {
+	return '';
+}
+
+/**
+ * @param int|\WP_Post|null $post Post ID, object, or null for the current global $post.
+ * @return bool
+ */
+function lunar_wiki_is_wiki_article( $post = null ): bool {
+	return false;
+}
+
+/**
+ * @return string[]
+ */
+function lunar_wiki_get_recognized_fields(): array {
+	return array();
+}
+
+/**
+ * @param int $term_id Term ID in the wiki_field taxonomy.
+ * @return string|null
+ */
+function lunar_wiki_get_field_label( int $term_id ): ?string {
+	return null;
+}
+
+/**
+ * @param string $slug Term slug in the wiki_field taxonomy.
+ * @return string
+ */
+function lunar_wiki_get_field_meta_key( string $slug ): string {
+	return '';
+}
+
+/**
+ * @param int $user_id User ID.
+ * @return string
+ */
+function lunar_wiki_get_author_role( int $user_id ): string {
+	return '';
+}
+
+/**
+ * @param int $user_id User ID.
+ * @return array<int, array{label: string, url: string, icon: string}>
+ */
+function lunar_wiki_get_author_social_links( int $user_id ): array {
+	return array();
+}
+
+/**
+ * @return string
+ */
+function lunar_wiki_get_game_menu_meta_key(): string {
+	return '';
+}
+
+/**
+ * @return string
+ */
+function lunar_wiki_get_game_tile_url_meta_key(): string {
+	return '';
+}
+
+/**
+ * @return string
+ */
+function lunar_wiki_get_game_tile_image_meta_key(): string {
+	return '';
+}
