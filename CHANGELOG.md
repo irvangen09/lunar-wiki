@@ -22,6 +22,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Author Role and Author Social Links fields on the WordPress user profile screen.
 - Shared nonce verification service used by all meta-saving handlers.
 - Initial "Role" term seeding for the `wiki_field` taxonomy, run once via `admin_init`.
+- High-level query helpers in the public API: `lunar_wiki_query_wiki_articles()` wraps `WP_Query` with the correct post type, and `lunar_wiki_get_content_type_terms()` returns the content_type terms actually used by articles under a given game term.
 
 ### Documentation
 
