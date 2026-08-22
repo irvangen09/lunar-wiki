@@ -117,3 +117,19 @@ function lunar_wiki_get_game_tile_image_meta_key(): string {
 function lunar_wiki_get_update_notes_meta_key(): string {
 	return \Lunar\Wiki\Content\Update_Notes_Meta::get_meta_key();
 }
+
+/**
+ * @param array<string, mixed> $args Extra/override WP_Query args. post_type is always forced.
+ * @return \WP_Query
+ */
+function lunar_wiki_query_wiki_articles( array $args = array() ): \WP_Query {
+	return \Lunar\Wiki\Content\Wiki_Query::query_wiki_articles( $args );
+}
+
+/**
+ * @param int $game_term_id Term ID in the game taxonomy.
+ * @return array<int, \WP_Term>
+ */
+function lunar_wiki_get_content_type_terms( int $game_term_id ): array {
+	return \Lunar\Wiki\Content\Wiki_Query::get_content_type_terms( $game_term_id );
+}
