@@ -23,10 +23,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Shared nonce verification service used by all meta-saving handlers.
 - Initial "Role" term seeding for the `wiki_field` taxonomy, run once via `admin_init`.
 - High-level query helpers in the public API: `lunar_wiki_query_wiki_articles()` wraps `WP_Query` with the correct post type, and `lunar_wiki_get_content_type_terms()` returns the content_type terms actually used by articles under a given game term.
+- Registration with Lunar SEO's supported post types filter, so `wiki_article` receives the same title/meta template resolution, editor override, and Article schema as native posts when Lunar SEO is active.
 
 ### Documentation
 
 - Clarified in `docs/LUNAR_BLOCKS_WIKI_INTEGRATION_CONTRACT.md` (§4.2.1) that `Infobox_Sync::extract_value()` in Lunar Blocks reading rendered HTML for the rich-text `value` attribute is an internal implementation detail of that plugin, not a cross-plugin regex-parsing pattern. No change to hook names, signatures, or the `$field_data` structure passed to listeners.
+- New `docs/LUNAR_SEO_WIKI_INTEGRATION_CONTRACT.md`, defining the `lunar_seo_supported_post_types` filter shared with Lunar SEO.
 
 ### Fixed
 

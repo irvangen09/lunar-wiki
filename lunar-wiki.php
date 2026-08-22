@@ -25,6 +25,7 @@ use Lunar\Wiki\Content\Infobox_Integration;
 use Lunar\Wiki\Content\Game_Menu_Meta;
 use Lunar\Wiki\Content\Game_Tile_Meta;
 use Lunar\Wiki\Content\Update_Notes_Meta;
+use Lunar\Wiki\Content\Seo_Integration;
 use Lunar\Wiki\Users\Author_Fields;
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -88,6 +89,7 @@ function bootstrap(): void {
 	( new Field_Terms_Seeder() )->init();
 	( new Meta_Sync() )->init();
 	( new Infobox_Integration() )->init();
+	( new Seo_Integration() )->init();
 	( new Game_Menu_Meta() )->init();
 	( new Game_Tile_Meta() )->init();
 	( new Update_Notes_Meta() )->init();
