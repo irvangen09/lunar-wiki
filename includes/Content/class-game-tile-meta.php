@@ -2,12 +2,12 @@
 /**
  * Registers the custom URL and image term meta on the game taxonomy.
  *
- * @package Lunar\Content
+ * @package Lunar\Wiki\Content
  */
 
-namespace Lunar\Content;
+namespace Lunar\Wiki\Content;
 
-use Lunar\Services\Nonce_Verifier;
+use Lunar\Wiki\Services\Nonce_Verifier;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;

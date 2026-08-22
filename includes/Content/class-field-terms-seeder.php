@@ -2,10 +2,10 @@
 /**
  * Seeds the initial "Role" term into the wiki_field taxonomy.
  *
- * @package Lunar\Content
+ * @package Lunar\Wiki\Content
  */
 
-namespace Lunar\Content;
+namespace Lunar\Wiki\Content;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;

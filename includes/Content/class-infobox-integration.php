@@ -2,10 +2,10 @@
 /**
  * Registers Lunar Wiki as a provider for the Lunar Blocks Infobox extension point.
  *
- * @package Lunar\Content
+ * @package Lunar\Wiki\Content
  */
 
-namespace Lunar\Content;
+namespace Lunar\Wiki\Content;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;

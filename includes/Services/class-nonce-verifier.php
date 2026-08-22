@@ -2,10 +2,10 @@
 /**
  * Shared nonce verification helper for term/post meta save handlers.
  *
- * @package Lunar\Services
+ * @package Lunar\Wiki\Services
  */
 
-namespace Lunar\Services;
+namespace Lunar\Wiki\Services;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;

@@ -2,10 +2,10 @@
 /**
  * Registers Lunar Wiki taxonomies.
  *
- * @package Lunar\Content
+ * @package Lunar\Wiki\Content
  */
 
-namespace Lunar\Content;
+namespace Lunar\Wiki\Content;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;

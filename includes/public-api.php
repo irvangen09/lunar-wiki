@@ -13,28 +13,28 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @return string
  */
 function lunar_wiki_get_post_type_slug(): string {
-	return \Lunar\Content\Post_Types::get_slug();
+	return \Lunar\Wiki\Content\Post_Types::get_slug();
 }
 
 /**
  * @return string
  */
 function lunar_wiki_get_taxonomy_slug_game(): string {
-	return \Lunar\Content\Taxonomies::get_slug_game();
+	return \Lunar\Wiki\Content\Taxonomies::get_slug_game();
 }
 
 /**
  * @return string
  */
 function lunar_wiki_get_taxonomy_slug_content_type(): string {
-	return \Lunar\Content\Taxonomies::get_slug_content_type();
+	return \Lunar\Wiki\Content\Taxonomies::get_slug_content_type();
 }
 
 /**
  * @return string
  */
 function lunar_wiki_get_taxonomy_slug_field(): string {
-	return \Lunar\Content\Taxonomies::get_slug_field();
+	return \Lunar\Wiki\Content\Taxonomies::get_slug_field();
 }
 
 /**
@@ -48,14 +48,14 @@ function lunar_wiki_is_wiki_article( $post = null ): bool {
 		return false;
 	}
 
-	return $post->post_type === \Lunar\Content\Post_Types::get_slug();
+	return $post->post_type === \Lunar\Wiki\Content\Post_Types::get_slug();
 }
 
 /**
  * @return array<string, string> Term slug => term label.
  */
 function lunar_wiki_get_recognized_fields(): array {
-	return ( new \Lunar\Content\Meta_Fields() )->get_recognized_fields();
+	return ( new \Lunar\Wiki\Content\Meta_Fields() )->get_recognized_fields();
 }
 
 /**
@@ -63,7 +63,7 @@ function lunar_wiki_get_recognized_fields(): array {
  * @return string|null
  */
 function lunar_wiki_get_field_label( int $term_id ): ?string {
-	return ( new \Lunar\Content\Meta_Fields() )->get_field_label( $term_id );
+	return ( new \Lunar\Wiki\Content\Meta_Fields() )->get_field_label( $term_id );
 }
 
 /**
@@ -71,7 +71,7 @@ function lunar_wiki_get_field_label( int $term_id ): ?string {
  * @return string
  */
 function lunar_wiki_get_field_meta_key( string $slug ): string {
-	return ( new \Lunar\Content\Meta_Fields() )->get_meta_key( $slug );
+	return ( new \Lunar\Wiki\Content\Meta_Fields() )->get_meta_key( $slug );
 }
 
 /**
@@ -79,7 +79,7 @@ function lunar_wiki_get_field_meta_key( string $slug ): string {
  * @return string
  */
 function lunar_wiki_get_author_role( int $user_id ): string {
-	return \Lunar\Users\Author_Fields::get_role( $user_id );
+	return \Lunar\Wiki\Users\Author_Fields::get_role( $user_id );
 }
 
 /**
@@ -87,33 +87,33 @@ function lunar_wiki_get_author_role( int $user_id ): string {
  * @return array<int, array{label: string, url: string, icon: string}>
  */
 function lunar_wiki_get_author_social_links( int $user_id ): array {
-	return \Lunar\Users\Author_Fields::get_social_links( $user_id );
+	return \Lunar\Wiki\Users\Author_Fields::get_social_links( $user_id );
 }
 
 /**
  * @return string
  */
 function lunar_wiki_get_game_menu_meta_key(): string {
-	return \Lunar\Content\Game_Menu_Meta::get_meta_key();
+	return \Lunar\Wiki\Content\Game_Menu_Meta::get_meta_key();
 }
 
 /**
  * @return string
  */
 function lunar_wiki_get_game_tile_url_meta_key(): string {
-	return \Lunar\Content\Game_Tile_Meta::get_url_meta_key();
+	return \Lunar\Wiki\Content\Game_Tile_Meta::get_url_meta_key();
 }
 
 /**
  * @return string
  */
 function lunar_wiki_get_game_tile_image_meta_key(): string {
-	return \Lunar\Content\Game_Tile_Meta::get_image_meta_key();
+	return \Lunar\Wiki\Content\Game_Tile_Meta::get_image_meta_key();
 }
 
 /**
  * @return string
  */
 function lunar_wiki_get_update_notes_meta_key(): string {
-	return \Lunar\Content\Update_Notes_Meta::get_meta_key();
+	return \Lunar\Wiki\Content\Update_Notes_Meta::get_meta_key();
 }

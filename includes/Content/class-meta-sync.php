@@ -2,10 +2,10 @@
 /**
  * Syncs Infobox field data from Lunar Blocks into wiki_article post meta.
  *
- * @package Lunar\Content
+ * @package Lunar\Wiki\Content
  */
 
-namespace Lunar\Content;
+namespace Lunar\Wiki\Content;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;

@@ -2,12 +2,12 @@
 /**
  * Registers the optional update notes meta box on the Wiki Article edit screen.
  *
- * @package Lunar\Content
+ * @package Lunar\Wiki\Content
  */
 
-namespace Lunar\Content;
+namespace Lunar\Wiki\Content;
 
-use Lunar\Services\Nonce_Verifier;
+use Lunar\Wiki\Services\Nonce_Verifier;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;

@@ -2,12 +2,12 @@
 /**
  * Adds Author Box fields (Role, Social Links) to the WordPress user profile screen.
  *
- * @package Lunar\Users
+ * @package Lunar\Wiki\Users
  */
 
-namespace Lunar\Users;
+namespace Lunar\Wiki\Users;
 
-use Lunar\Services\Nonce_Verifier;
+use Lunar\Wiki\Services\Nonce_Verifier;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
