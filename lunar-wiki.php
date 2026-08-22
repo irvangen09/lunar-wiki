@@ -17,15 +17,15 @@
 
 namespace Lunar\Wiki;
 
-use Lunar\Content\Post_Types;
-use Lunar\Content\Taxonomies;
-use Lunar\Content\Field_Terms_Seeder;
-use Lunar\Content\Meta_Sync;
-use Lunar\Content\Infobox_Integration;
-use Lunar\Content\Game_Menu_Meta;
-use Lunar\Content\Game_Tile_Meta;
-use Lunar\Content\Update_Notes_Meta;
-use Lunar\Users\Author_Fields;
+use Lunar\Wiki\Content\Post_Types;
+use Lunar\Wiki\Content\Taxonomies;
+use Lunar\Wiki\Content\Field_Terms_Seeder;
+use Lunar\Wiki\Content\Meta_Sync;
+use Lunar\Wiki\Content\Infobox_Integration;
+use Lunar\Wiki\Content\Game_Menu_Meta;
+use Lunar\Wiki\Content\Game_Tile_Meta;
+use Lunar\Wiki\Content\Update_Notes_Meta;
+use Lunar\Wiki\Users\Author_Fields;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -62,16 +62,16 @@ if ( ! environment_is_supported() ) {
 require_once LUNAR_WIKI_PLUGIN_DIR . 'includes/public-api.php';
 
 /**
- * Maps Lunar\Segment\Class_Name to includes/Segment/class-class-name.php.
+ * Maps Lunar\Wiki\Segment\Class_Name to includes/Segment/class-class-name.php.
  *
  * @param string $class_name Fully qualified class name.
  */
 function autoload( string $class_name ): void {
-	if ( ! str_starts_with( $class_name, 'Lunar\\' ) ) {
+	if ( ! str_starts_with( $class_name, 'Lunar\\Wiki\\' ) ) {
 		return;
 	}
 
-	$relative  = substr( $class_name, strlen( 'Lunar\\' ) );
+	$relative  = substr( $class_name, strlen( 'Lunar\\Wiki\\' ) );
 	$parts     = explode( '\\', $relative );
 	$file_name = 'class-' . strtolower( str_replace( '_', '-', array_pop( $parts ) ) ) . '.php';
 	$path      = LUNAR_WIKI_PLUGIN_DIR . 'includes/' . implode( '/', $parts ) . '/' . $file_name;
