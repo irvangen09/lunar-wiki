@@ -19,6 +19,7 @@ namespace Lunar\Wiki;
 
 use Lunar\Content\Post_Types;
 use Lunar\Content\Taxonomies;
+use Lunar\Content\Field_Terms_Seeder;
 use Lunar\Content\Meta_Sync;
 use Lunar\Content\Infobox_Integration;
 use Lunar\Content\Game_Menu_Meta;
@@ -84,6 +85,7 @@ spl_autoload_register( __NAMESPACE__ . '\\autoload' );
 function bootstrap(): void {
 	( new Post_Types() )->init();
 	( new Taxonomies() )->init();
+	( new Field_Terms_Seeder() )->init();
 	( new Meta_Sync() )->init();
 	( new Infobox_Integration() )->init();
 	( new Game_Menu_Meta() )->init();
